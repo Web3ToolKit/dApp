@@ -14,7 +14,7 @@ export const setState = (newState) => {
   state = newState;
 }
 
-Contract.setProvider("https://polygon-mainnet.infura.io/v3/3ac65935c854491fbb57acff35b8d39b");
+Contract.setProvider("https://polygon-mumbai.infura.io/v3/3ac65935c854491fbb57acff35b8d39b");
 export const contractInstance = new Contract(EventModuleCoreArtifact.abi, contractAddress);
 
 export const  contractInstance1 = new web3.eth.Contract(EventModuleCoreArtifact.abi, contractAddress);
@@ -80,7 +80,7 @@ export const init = async () => {
   // Fallback to localhost; use dev console port by default...
   else {
     const provider = new Web3.providers.HttpProvider(
-        "https://polygon-mainnet.infura.io/v3/3ac65935c854491fbb57acff35b8d39b"
+        "https://polygon-mumbai.infura.io/v3/3ac65935c854491fbb57acff35b8d39b"
     );
     const web3 = new Web3(provider);
     console.log("No web3 instance injected, using Local web3.");
