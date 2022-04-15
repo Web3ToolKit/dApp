@@ -94,7 +94,6 @@ export default {
     loading: false,
     protocolType: [
       { id: 1, name: "ERC721" },
-      { id: 2, name: "DAO" },
     ],
     account: null,
     selected: '',
@@ -205,6 +204,7 @@ export default {
             protocol: value[0],
             contract: value[2],
             _newHash: cid,
+            type: 'ERC721'
           };
           console.log(' this.protocolList payload' +  JSON.stringify(payload));
           await addData('protocol', num.toString(), payload);
